@@ -1,47 +1,125 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Каталог кроватей</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 0;
-            background-color: #f9f9f9;
-        }
-        .container {
-            margin: 20px auto;
-            max-width: 80%;
-        }
-        iframe {
-            width: 100%;
-            height: 80vh;
-            border: none;
-        }
-        .download-btn {
-            margin-top: 20px;
-            display: inline-block;
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-        }
-        .download-btn:hover {
-            background-color: #45a049;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог кроватей Saga</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+
+    header nav a:hover {
+      text-decoration: underline;
+    }
+
+    #gallery {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery-item {
+      width: 300px;
+      text-align: center;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-item p {
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      .gallery-container {
+        flex-direction: column;
+      }
+
+      header nav a {
+        display: block;
+        margin: 10px 0;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Каталог кроватей</h1>
-        <p>Просмотрите наш каталог или скачайте его для более удобного использования.</p>
-        <iframe src="sa.3.pdf"></iframe>
-        <a href="sa.3.pdf" class="download-btn" download>Скачать каталог</a>
+  <header>
+    <h1>Saga - Создаем уют</h1>
+    <nav>
+      <a href="#gallery">Каталог</a>
+    </nav>
+  </header>
+
+  <section id="gallery">
+    <h2>Наши кровати</h2>
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <a href="images/bed1.jpg" data-lightbox="beds" data-title="Кровать 1 - Модель Classic">
+          <img src="images/bed1.jpg" alt="Кровать 1">
+        </a>
+        <p>Кровать 1 - Модель Classic</p>
+      </div>
+      <div class="gallery-item">
+        <a href="images/bed2.jpg" data-lightbox="beds" data-title="Кровать 2 - Модель Modern">
+          <img src="images/bed2.jpg" alt="Кровать 2">
+        </a>
+        <p>Кровать 2 - Модель Modern</p>
+      </div>
+      <div class="gallery-item">
+        <a href="images/bed3.jpg" data-lightbox="beds" data-title="Кровать 3 - Модель Premium">
+          <img src="images/bed3.jpg" alt="Кровать 3">
+        </a>
+        <p>Кровать 3 - Модель Premium</p>
+      </div>
+      <!-- Добавьте больше фото, если нужно -->
     </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Saga. Все права защищены.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
