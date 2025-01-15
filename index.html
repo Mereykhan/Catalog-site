@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог кроватей</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Каталог кроватей Saga</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background-color: #333;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    .catalog-container {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+    .catalog-item img {
+      max-width: 90%;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+  </style>
 </head>
 <body>
-  <header class="main-header">
-    <img src="Pictures/1.jpg" alt="Главное фото" class="main-image">
-    <h1>Каталог кроватей</h1>
+  <header>
+    <h1>Каталог кроватей Saga</h1>
   </header>
-
-  <section class="gallery">
-    <h2>Наши кровати</h2>
-    <div class="images">
-      <!-- JavaScript автоматически добавит фото -->
+  <main class="catalog-container">
+    <div class="catalog-item">
+      <img src="images/page1.jpg" alt="Страница 1">
     </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Каталог кроватей</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <div class="catalog-item">
+      <img src="images/page2.jpg" alt="Страница 2">
+    </div>
+    <!-- Добавьте больше изображений -->
+  </main>
 </body>
 </html>
